@@ -1,0 +1,383 @@
+/* =====================
+   RESET & BASE
+   ===================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(180deg, #6dd5fa, #ffffff);
+    font-family: sans-serif;
+    padding-bottom: 60px;
+}
+
+
+/* =====================
+   HEADER
+   ===================== */
+
+header {
+    font-size: 30px;
+    padding: 20px 30px;
+}
+
+
+/* =====================
+   TITLES
+   ===================== */
+
+#h {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+#j {
+    text-align: center;
+    font-weight: normal;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+
+/* =====================
+   SEARCH BAR
+   ===================== */
+
+.search {
+    width: 700px;
+    max-width: 95%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+}
+
+.search button {
+    background: #8ea2ff;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search button:hover {
+    background: #6b84f0;
+}
+
+
+/* =====================
+   POPULAR CITIES
+   ===================== */
+
+.popular-cities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.popular-cities button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.popular-cities button:hover {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+
+/* =====================
+   MAIN WEATHER CARD WRAPPER
+   ===================== */
+
+.containerw {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+
+/* =====================
+   MAIN WEATHER CARD
+   ===================== */
+
+.weather-card {
+    position: relative;
+    width: 900px;
+    max-width: 95%;
+    padding: 30px;
+    border-radius: 25px;
+    background: linear-gradient(180deg, #f7fbff, #e8f0ff);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+
+/* =====================
+   WEATHER INFO (left side)
+   ===================== */
+
+.weather-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.weather-info h2 {
+    font-size: 50px;
+    margin-bottom: 4px;
+}
+
+#pp {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#C {
+    font-size: 70px;
+    line-height: 1;
+    margin: 10px 0 6px;
+}
+
+#pc {
+    font-size: 20px;
+    color: #555;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.temp-range {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* =====================
+   WEATHER ICON (right side)
+   ===================== */
+
+.weather-icon {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+
+/* =====================
+   STAT CARDS (bottom row)
+   ===================== */
+
+.stats {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 140px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+
+/* =====================
+   5-DAY FORECAST TITLE
+   ===================== */
+
+#forecast-title {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+
+/* =====================
+   FORECAST CARDS CONTAINER
+   ===================== */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+
+/* =====================
+   INDIVIDUAL FORECAST CARD
+   ===================== */
+
+.card {
+    min-height: 220px;
+    width: 160px;
+    background: linear-gradient(180deg, #f7fbff, #e8f0ff);
+    border-radius: 25px;
+    padding: 20px 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.card p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.temp-high {
+    color: #e05252;
+}
+
+.temp-low {
+    color: #5280e0;
+}
+
+.card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin: 5px 0;
+}
+
+
+/* =====================
+   MOBILE 
+   ===================== */
+
+@media (max-width: 768px) {
+    .weather-icon {
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .weather-icon img {
+        width: 80px;
+        height: 80px;
+    }
+    .weather-card {
+        width: 95%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 20px;
+    }
+    .weather-info {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .stats {
+        grid-column: 1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .stat-card {
+        width: 100%;
+    }
+    .search {
+        width: 95%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .search button {
+        padding: 12px 20px;
+        font-size: 15px;
+        border-radius: 12px;
+        flex: 1;
+    }
+    .search #location-btn {
+        width: 100%;
+        flex: unset;
+        text-align: center;
+    }
+    .container {
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .card {
+        width: 140px;
+    }
+    #C {
+        font-size: 55px;
+    }
+    .weather-info h2 {
+        font-size: 36px;
+    }
+}

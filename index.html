@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWatch</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <header>🌤️ SkyWatch</header>
+
+    <h1 id="h">Real-Time Weather</h1>
+    <h2 id="j">Search any city worldwide to get live conditions</h2>
+
+    <div class="search">
+        <input type="text" placeholder="Search for a city...">
+        <button class="search-btn">Search</button>
+        <button id="location-btn">📍 My Location</button>
+    </div>
+
+    <div class="popular-cities">
+        <button>📍 New York</button>
+        <button>📍 London</button>
+        <button>📍 Tokyo</button>
+        <button>📍 Paris</button>
+        <button>📍 Sydney</button>
+    </div>
+
+    <div class="containerw">
+        <div class="weather-card">
+
+            <div class="weather-info">
+                <h2 id="city-name">Rabat</h2>
+                <p id="pp"><span id="country">MA</span> · Updated just now</p>
+                <h1 id="C">20°</h1>
+                <p id="pc">Partly Cloudy</p>
+
+                <div class="temp-range">
+                    <span id="temp-max">↑ 27°</span>
+                    <span id="temp-min">↓ 18°</span>
+                </div>
+            </div>
+
+            <div class="weather-icon">
+                <img id="weather-img" src="" alt="Weather Icon" style="display:none;">
+            </div>
+
+            <!-- Small cards -->
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Humidity</h3>
+                    <p id="humidity">62%</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Wind Speed</h3>
+                    <p id="wind">18 km/h</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Feels Like</h3>
+                    <p id="feels-like">22°C</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>UV Index</h3>
+                    <p id="uv-index">N/A</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2 id="forecast-title">5-Day Forecast</h2>
+
+    <div class="container" id="forecast-container"></div>
+
+    <script src="jsweather.js"></script>
+</body>
+
+</html>
